@@ -1,0 +1,1004 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "267f840b-5a9f-4b84-bc84-a15746f4755a",
+   "metadata": {},
+   "source": [
+    "# 1.1 変数\n",
+    "変数とは、文字や数値などのデータを入れておける箱です。プログラム内で何らかのデータを使いたい時に、そのデータに名前をつけて操作することができます。<br>Pythonでは変数にデータを代入することで変数を作成できます。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "60d439c5-22f9-4b4a-994d-7bb879b40d54",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 変数の作成と代入  \n",
+    "message = \"こんにちは、Python!\"  \n",
+    "number = 100  \n",
+    "pi = 3.14  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9456bc0e-0371-412c-8e6a-378dde7c8620",
+   "metadata": {},
+   "source": [
+    "上記の例では、文字列\"こんにちは、Python!\"をmessage変数に、整数100をnumber変数に、そして浮動小数点数3.14をpi変数にそれぞれ入れています。\n",
+    "\n",
+    "「=」はイコールの意味ではなく、左の変数に右の値を入れることを意味します。"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0e5a0dcd-ca56-47c2-aa7b-279dfc05e32b",
+   "metadata": {},
+   "source": [
+    "<img src='1.1.png'>\n",
+    "https://www.datamentor.io/python/variables"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8b66228e-f358-4879-a0bd-55d56fd1f745",
+   "metadata": {},
+   "source": [
+    "# 1.2 変数とメモリ\n",
+    "コンピュータ内部にはにはメモリという部品があり、変数はプログラムが実行される際に、コンピュータのメモリ上に確保される一時的な記憶場所です。<br>変数に格納されるデータ（値）は、メモリの特定の位置に保存されます。"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9791e489-9bde-43e6-9521-8de90ea36400",
+   "metadata": {},
+   "source": [
+    "<img src='1.2.png' width=\"500\">\n",
+    "https://www.indiamart.com/proddetail/computer-ram-16331528297.html"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d6a821ac-e165-41db-b4ef-e3960269f1c5",
+   "metadata": {},
+   "source": [
+    "# 1.3 Pythonのデータ型\n",
+    "コンピュータサイエンスにおいて、データ型（または単に「型」とも）は、データの種類を意味し、それによってどのようなデータを変数の箱に入れられるか、どのような操作ができるかがきまります。<br>Pythonにはいくつかの基本的なデータ型があります。\n",
+    "\n",
+    "\n",
+    "整数型（int）<br>浮動小数点型（float）<br>文字列型（str）<br>ブール型（bool）<br>リスト（list）<br>タプル（tuple）<br>辞書（dict）\n",
+    "\n",
+    "\n",
+    "例えば、整数はint、小数点を含む数はfloat、テキストはstrとして扱われます。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "0d83849f-2bc6-4bab-a394-b665070b1fb3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 整数型  \n",
+    "age = 30  \n",
+    "  \n",
+    "# 浮動小数点型  \n",
+    "weight = 65.5  \n",
+    "  \n",
+    "# 文字列型  \n",
+    "name = \"Alice\"  \n",
+    "  \n",
+    "# ブール型  \n",
+    "is_adult = True  \n",
+    "  \n",
+    "# リスト  \n",
+    "fruits = [\"apple\", \"banana\", \"cherry\"]  \n",
+    "  \n",
+    "# タプル  \n",
+    "coordinates = (10, 20)  \n",
+    "  \n",
+    "# 辞書  \n",
+    "person = {\"name\": \"Bob\", \"age\": 25} "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "c12aa77e-fc21-48d6-965f-2af7c0b58c33",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "整数の型　　　　　：int\n",
+      "小数点を含む数の型：float\n",
+      "テキストの型　　　：str\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(f\"整数の型　　　　　：{type(age).__name__}\")\n",
+    "print(f\"小数点を含む数の型：{type(weight).__name__}\")\n",
+    "print(f\"テキストの型　　　：{type(name).__name__}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "11c085e1-891f-4069-bcb1-6bb69729f8ac",
+   "metadata": {},
+   "source": [
+    "# 1.4 演算\n",
+    "Pythonの演算には様々なタイプがあり、それぞれ異なるデータ型と操作を扱います。ここでは、数値演算、文字列操作、リスト操作の例を交えて解説します。  \n",
+    "   \n",
+    "### __数値演算__\n",
+    "数値演算では、整数や浮動小数点数の計算を行います。以下は基本的な数値演算の例です。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "40e691ed-ca67-4b43-be7b-a2c689d90dbd",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 加算  \n",
+    "a = 10  \n",
+    "b = 5  \n",
+    "c = a + b  # cは15  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "aa168de5-e98b-47c7-9db0-0650bcca10a6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "15\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(c)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "9dce135e-1a22-49d0-8055-7d3e03591593",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "5\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 減算  \n",
+    "d = a - b  # dは5  \n",
+    "\n",
+    "print(d)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "5e73bbcc-16b1-4533-a7bb-9ae0718c48b3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "50\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 乗算  \n",
+    "e = a * b  # eは50 \n",
+    "\n",
+    "print(e)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "efb6e00d-ea48-4d63-be0d-f1c70d0c3c3a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 真の除算  \n",
+    "f = a / b  # fは2.0（浮動小数点数） \n",
+    "\n",
+    "print(f)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "68ad6a0a-17a0-4a03-bbe1-91d8148f10b9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 整数除算  \n",
+    "g = a // b  # gは2（整数）  \n",
+    "\n",
+    "print(g)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "3c4eba2e-e24a-49ab-9cdc-2e6489367b0b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 剰余（モジュロ）  \n",
+    "h = a % b  # hは0（10は5で割り切れる） \n",
+    "\n",
+    "print(h)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "5fd8868e-d8e2-4609-9a5f-93ae63da2642",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "100000\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 指数  \n",
+    "i = a ** b  # iは100000（10の5乗）  \n",
+    "\n",
+    "print(i)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "354a6406-9157-48d3-a7b3-b2fe4e74a164",
+   "metadata": {},
+   "source": [
+    "### __文字列操作__  \n",
+    "文字列操作では、文字列を結合したり、部分文字列を抽出したりします。以下は文字列操作の例です。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "e0e598b2-d06e-4388-92dc-138a33c01466",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hello World\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 文字列の結合  \n",
+    "str1 = \"Hello\"  \n",
+    "str2 = \"World\"  \n",
+    "combined_str = str1 + \" \" + str2  # \"Hello World\"  \n",
+    "\n",
+    "print(combined_str)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "10041fd0-d6e8-47fd-a07b-7535333e4587",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "HelloHelloHello\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 文字列の繰り返し  \n",
+    "repeated_str = str1 * 3  # \"HelloHelloHello\"  \n",
+    "   \n",
+    "print(repeated_str)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "7e9ab26e-e4d2-499e-8802-fc1a3b87b1bc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "World\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 文字列のスライシング  \n",
+    "hello_world = \"Hello, World!\"  \n",
+    "world = hello_world[7:12]  # \"World\" (7番目から11番目の文字を取得)  \n",
+    "   \n",
+    "print(world)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "dc5774d1-653f-4cc0-9a90-ca7c629c60e2",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "13\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 文字列の長さ  \n",
+    "length = len(hello_world)  # 13  \n",
+    "   \n",
+    "print(length)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "87d11b9d-f371-4db8-b486-e23c9b094ee5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hello, Python!\n"
+     ]
+    }
+   ],
+   "source": [
+    "# 文字列の置換  \n",
+    "replaced_str = hello_world.replace(\"World\", \"Python\")  # \"Hello, Python!\" \n",
+    "\n",
+    "print(replaced_str)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9063c059-8acf-4fb9-afce-dcf1f45a3741",
+   "metadata": {},
+   "source": [
+    "### __リスト操作__\n",
+    "リストは変更可能なシーケンスで、異なるタイプの要素を含むことができます。リストに対するいくつかの演算を見てみましょう。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "df43fb44-58ef-476f-8289-1fb446465b56",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# リストの作成  \n",
+    "numbers = [1, 2, 3, 4, 5]  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "9b9356f8-a6da-4862-923e-361481b0b51c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2\n"
+     ]
+    }
+   ],
+   "source": [
+    "# リストの要素にアクセス  \n",
+    "second_number = numbers[1]  # 2（インデックスは0から始まる）  \n",
+    "   \n",
+    "print(second_number)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "e15fdc88-1f27-4e0b-a590-8306790df23f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# リストのスライシング  \n",
+    "first_three = numbers[:3]  # [1, 2, 3]  \n",
+    "   \n",
+    "print(first_three)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "8126b0bd-6345-4148-930a-280aca326d95",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 4, 5, 6]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# リストの要素の追加  \n",
+    "numbers.append(6)  # [1, 2, 3, 4, 5, 6]  \n",
+    "\n",
+    "print(numbers)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "ab507f14-f508-475c-aa71-4142b18daf03",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 4, 5, 6, 7, 8, 9]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# リストの結合  \n",
+    "more_numbers = [7, 8, 9]  \n",
+    "combined_list = numbers + more_numbers  # [1, 2, 3, 4, 5, 6, 7, 8, 9]  \n",
+    "\n",
+    "print(combined_list)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "f8a63b09-4a55-45b5-bbb8-4a54539816f7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 1, 3, 4, 5]\n"
+     ]
+    }
+   ],
+   "source": [
+    "# リストの要素をソート  \n",
+    "unsorted_list = [3, 1, 4, 1, 5]  \n",
+    "unsorted_list.sort()  # [1, 1, 3, 4, 5]\n",
+    "\n",
+    "print(unsorted_list)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ae86eb67-c1ec-4176-9f1e-b0266a9ed620",
+   "metadata": {},
+   "source": [
+    "# 1.5 関数 \n",
+    "Pythonの関数は、コードを何度も使える部分に分割するのに役立ちます。関数を使用することで、コードをを整理し、部品化されたものにすることができます。<br>Pythonでは、関数は `def` キーワードを用いて関数を定義します。\n",
+    "\n",
+    "\n",
+    "以下は、Pythonで最も基本的な関数の一つです。何も引数を取らず、単純に文字列を出力する関数です。     "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "ef70fb77-8c0b-421a-b213-2abbacda22dd",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hello, World!\n"
+     ]
+    }
+   ],
+   "source": [
+    "def greet():  \n",
+    "    print(\"Hello, World!\")  \n",
+    "   \n",
+    "greet()  # 関数を呼び出す "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "855d5ba4-56a4-4ce5-8886-37965c5e7062",
+   "metadata": {},
+   "source": [
+    "### __引数を取る関数__     \n",
+    "関数は引数を取ることができ、これを用いて関数にデータを渡すことができます。 "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "5810260b-cb5b-4a6c-859f-6506b8cf3f26",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hello, Alice!\n",
+      "Hello, Bob!\n"
+     ]
+    }
+   ],
+   "source": [
+    "def greet(name):  \n",
+    "    print(f\"Hello, {name}!\")  \n",
+    "   \n",
+    "greet(\"Alice\")  # \"Hello, Alice!\" を出力  \n",
+    "greet(\"Bob\")    # \"Hello, Bob!\" を出力   "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bb2de304-df0a-4c6e-98a9-d9a9c1f34d90",
+   "metadata": {},
+   "source": [
+    "### __関数のスコープ__  \n",
+    "Pythonでは、関数内で宣言された変数はローカルスコープに属し、関数外からは直接アクセスすることができません。<br>一方で、関数外で宣言された変数はグローバルスコープに属し、プログラム内のどこからでもアクセスすることができます。  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "66773860-e24b-42a4-ac98-6528e184743d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Function inside: local\n",
+      "Function outside: global\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = \"global\"  \n",
+    "   \n",
+    "def my_function():  \n",
+    "    y = \"local\"  \n",
+    "    print(\"Function inside:\", y)  \n",
+    "   \n",
+    "my_function()  # \"Function inside: local\" を出力  \n",
+    "print(\"Function outside:\", x)  # \"Function outside: global\" を出力  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "324faeeb-1a0e-4450-9472-280361895d7e",
+   "metadata": {},
+   "source": [
+    "### __グローバル変数とローカル変数__  \n",
+    "関数内でグローバル変数を扱いたい場合は、`global` キーワードを使用してその変数を宣言する必要があります。  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "7b2275c8-dbd5-48ee-bbeb-4ea6a2ce1525",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Function inside: modified\n",
+      "Function outside: modified\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = \"global\"  \n",
+    "   \n",
+    "def my_function():  \n",
+    "    global x  \n",
+    "    x = \"modified\"  \n",
+    "    print(\"Function inside:\", x)  \n",
+    "   \n",
+    "my_function()  # \"Function inside: modified\" を出力  \n",
+    "print(\"Function outside:\", x)  # \"Function outside: modified\" を出力  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "508138fd-134f-421f-8683-2349bcce2f6f",
+   "metadata": {},
+   "source": [
+    "# 1.6 制御構造\n",
+    " コンピュータサイエンスにおける制御構造は、プログラムの流れを制御するための構造です。これにより、プログラムは入力や計算結果に基づいて異なるルートを取ることができます。<br>ythonにおけるおもな制御構造には条件分岐、繰り返し（ループ）、および関数の呼び出しがあります。\n",
+    "\n",
+    "\n",
+    "### __条件分岐: if、elif、else__\n",
+    "条件分岐は、特定の条件が真（True）であるかどうかに基づいて、どのコードブロックを実行するかを決定します。Pythonではif文を使ってこの機能を実現しています。\n",
+    "\n",
+    "  "
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "fa0f25c3-d38e-4d83-8d14-75ae47b7bad7",
+   "metadata": {},
+   "source": [
+    "if condition:  \n",
+    "    # 条件がTrueの場合に実行されるブロック  \n",
+    "elif another_condition:  \n",
+    "    # 最初の条件がFalseで、次の条件がTrueの場合に実行されるブロック  \n",
+    "else:  \n",
+    "    # 全ての条件がFalseの場合に実行されるブロック"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "06fd8558-79df-42c1-9ec7-d5b71c59edb1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "成人です\n"
+     ]
+    }
+   ],
+   "source": [
+    "# if文の例  \n",
+    "age = 20  \n",
+    "if age >= 18:  \n",
+    "    print(\"成人です\")  \n",
+    "else:  \n",
+    "    print(\"未成年です\")  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "120e5988-2041-4a8e-a66f-d1626d46ab2d",
+   "metadata": {},
+   "source": [
+    "### __繰り返し（ループ）: for、while__\n",
+    "繰り返しは、コードのブロックを複数回実行するための構造です。Pythonではforループとwhileループの2つの主要な方法があります。\n",
+    "\n",
+    "\n",
+    "forループは、コレクション（リスト、タプルなど）やイテレータを通じて繰り返し処理を行います。"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "12bc53b1-548b-43de-b90f-33b07d7fe18e",
+   "metadata": {},
+   "source": [
+    "for item in iterable:  \n",
+    "    # 各要素に対して実行されるコード  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "77ae687d-f65c-4c40-a426-0dfa808850d7",
+   "metadata": {},
+   "source": [
+    "whileループは、ある条件が真（True）である間、コードブロックを繰り返し実行します。"
+   ]
+  },
+  {
+   "cell_type": "raw",
+   "id": "15cad9a6-d937-4864-9ce5-8c85527816b9",
+   "metadata": {},
+   "source": [
+    "while condition:  \n",
+    "    # 条件がTrueの間繰り返されるコード  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "fe7a1f9e-cf57-4c92-a3dd-b95d259bd735",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "apple\n",
+      "banana\n",
+      "cherry\n"
+     ]
+    }
+   ],
+   "source": [
+    "# for文の例  \n",
+    "fruits = [\"apple\", \"banana\", \"cherry\"]  \n",
+    "for fruit in fruits:  \n",
+    "    print(fruit)  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "0a44c2c2-6c0e-4031-a74b-14f58b3129c4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n"
+     ]
+    }
+   ],
+   "source": [
+    "# while文の例  \n",
+    "count = 0  \n",
+    "while count < 5:  \n",
+    "    print(count)  \n",
+    "    count += 1  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7dcc3db7-d839-4ed4-8430-1ca9534ef10e",
+   "metadata": {},
+   "source": [
+    "### __関数の呼び出し__\n",
+    "関数は、再利用可能なコードのブロックです。Pythonではdefキーワードを使って関数を定義し、関数名を呼び出すことでそのコードを実行します。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "70937e48-b17c-4620-b8bc-ef049a3e1e1e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2"
+      ]
+     },
+     "execution_count": 30,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "def function_name(parameters):  \n",
+    "    result = parameters + 1\n",
+    "    return result  \n",
+    "  \n",
+    "# 関数を呼び出す  \n",
+    "function_name(1)  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5324e79e-fea3-4613-8e23-fc0888158070",
+   "metadata": {},
+   "source": [
+    "# 1.7 プログラムを使ってできること\n",
+    "この章では、今まで習ったことを使い、プログラムを実際に使ってできることを紹介します。\n",
+    "\n",
+    "### ①おみくじプログラム\n",
+    "まず初めに、おみくじのプログラムを紹介します。実行すると大吉から凶までの中からランダムに結果が表示されます。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "2654278b-9418-4fc2-afb3-1eb580738439",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "おみくじを引きます！\n",
+      "結果は・・・ 中吉\n"
+     ]
+    }
+   ],
+   "source": [
+    "import random\n",
+    "\n",
+    "def omikuji():\n",
+    "    results = [\"大吉\", \"中吉\", \"小吉\", \"吉\", \"末吉\", \"凶\"]\n",
+    "    choice = random.choice(results)\n",
+    "    return choice\n",
+    "\n",
+    "# 実行例\n",
+    "print(\"おみくじを引きます！\")\n",
+    "print(\"結果は・・・\", omikuji())"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6c622f7e-9793-42fe-a930-766a5217ee62",
+   "metadata": {},
+   "source": [
+    "### __化学への応用__\n",
+    "近年、情報科学の発展に伴い、科学者もシミュレーション技術を活用しています。\n",
+    "pythonを使うことで簡単な構造式の化合物を表示可能です。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "43950349-4f4a-41ed-ac24-7300ace7cc8a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from rdkit import Chem\n",
+    "from rdkit.Chem import Draw\n",
+    "\n",
+    "# マルトースの SMILES\n",
+    "malto_smiles = \"C(C1C(C(C(C(O1)O)O)O)O)OCC2C(C(C(C(O2)CO)O)O)O\"\n",
+    "\n",
+    "# 分子オブジェクトを作成\n",
+    "mol = Chem.MolFromSmiles(malto_smiles)\n",
+    "\n",
+    "# 分子を描画\n",
+    "Draw.MolToImage(mol)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "639080d6-65cb-4a94-ad69-797bb2b2b5be",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 必要なライブラリをインストール（Notebookで初回のみ）\n",
+    "# !pip install rdkit-pypi py3Dmol\n",
+    "\n",
+    "from rdkit import Chem\n",
+    "from rdkit.Chem import AllChem\n",
+    "import py3Dmol\n",
+    "\n",
+    "# マルトースの SMILES\n",
+    "malto_smiles = \"C(C1C(C(C(C(O1)O)O)O)O)OCC2C(C(C(C(O2)CO)O)O)O\"\n",
+    "\n",
+    "# 分子オブジェクト作成\n",
+    "mol = Chem.MolFromSmiles(malto_smiles)\n",
+    "mol = Chem.AddHs(mol)  # 水素を追加\n",
+    "\n",
+    "# 3D座標生成\n",
+    "AllChem.EmbedMolecule(mol, randomSeed=0xf00d)\n",
+    "AllChem.UFFOptimizeMolecule(mol)\n",
+    "\n",
+    "# 3Dmol.js用にMolBlockに変換\n",
+    "molblock = Chem.MolToMolBlock(mol)\n",
+    "\n",
+    "# 3D表示\n",
+    "view = py3Dmol.view(width=400, height=400)\n",
+    "view.addModel(molblock, 'mol')\n",
+    "view.setStyle({'stick': {}})\n",
+    "view.setBackgroundColor('0xeeeeee')\n",
+    "view.zoomTo()\n",
+    "view.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "222a2963-52fe-49df-942a-3715fb43295b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import py3Dmol\n",
+    "\n",
+    "# PDBファイルを読み込み\n",
+    "with open(\"5wqs.pdb\", \"r\") as f:\n",
+    "    pdb_data = f.read()\n",
+    "\n",
+    "# 左寄せ用HTMLスタイルを指定\n",
+    "view = py3Dmol.view(width=400, height=400)\n",
+    "view.addModel(pdb_data, 'pdb')\n",
+    "view.setStyle({'cartoon': {'color':'spectrum'}})\n",
+    "view.zoomTo()\n",
+    "\n",
+    "# 左寄せ表示\n",
+    "view._make_html()  # 内部HTMLを取得\n",
+    "from IPython.display import display, HTML\n",
+    "display(HTML(f\"<div style='float:left'>{view._make_html()}</div>\"))\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
